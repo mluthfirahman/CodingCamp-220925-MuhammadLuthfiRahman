@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Ganti dengan nama user yang diinginkan
-const user = "Username"; 
+
+// Prompt for username on page load
+let user = window.prompt("Please enter your username:", "User");
+if (!user) user = "User";
 document.getElementById("user").textContent = `${user}`;
 
 // Add event listener to all Log out buttons
@@ -19,7 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (btn.textContent.trim() === "Log out") {
             btn.addEventListener('click', function() {
                 alert(`User ${user} has logged out.`);
-                // Add your actual log out logic here if needed
+                // Prompt for new username
+                let newUser = window.prompt("Please enter your username:", "User");
+                if (!newUser) newUser = "User";
+                user = newUser;
+                document.getElementById("user").textContent = `${user}`;
             });
         }
     });
