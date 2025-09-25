@@ -1,22 +1,18 @@
 
-// Toggle mobile menu
 document.addEventListener('DOMContentLoaded', function() {
+    // Toggle mobile menu
     const btn = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', function() {
         menu.classList.toggle('hidden');
     });
-});
 
+    // Prompt for username once DOM is ready
+    let user = window.prompt("Please enter your username:", "User");
+    if (!user) user = "User";
+    document.getElementById("user").textContent = `${user}`;
 
-
-// Prompt for username on page load
-let user = window.prompt("Please enter your username:", "User");
-if (!user) user = "User";
-document.getElementById("user").textContent = `${user}`;
-
-// Add event listener to all Log out buttons
-document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to all Log out buttons
     document.querySelectorAll('button').forEach(btn => {
         if (btn.textContent.trim() === "Log out") {
             btn.addEventListener('click', function() {
@@ -29,22 +25,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-});
 
-
-document.addEventListener('DOMContentLoaded', function() {
+    // Form logic
     const nameInput = document.getElementById('nameFill');
     const dateInput = document.getElementById('dateFill');
-    const messageInput = document.getElementById('messageFill')
-    
+    const messageInput = document.getElementById('messageFill');
     const outputName = document.getElementById('outputName');
     const outputDate = document.getElementById('outputDate');
     const outputMessage = document.getElementById('outputMessage');
     const outputTimestamp = document.getElementById('outputTimestamp');
     const output = document.getElementById('output');
     const form = nameInput.closest('form');
-
-
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -57,11 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const timestamp = now.toString().split(" (")[0];
 
-         // ambil radio button yang dipilih
+        // ambil radio button yang dipilih
         const genderInput = document.querySelector('input[name="genderFill"]:checked');
         const gender = genderInput ? genderInput.value : '-';
 
-        
         // Format dd/mm/yyyy
         const dateValue = new Date(date);
         const day = String(dateValue.getDate()).padStart(2, '0');
