@@ -7,9 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.classList.toggle('hidden');
     });
 
-    // Prompt for username once DOM is ready
-    let user = window.prompt("Please enter your username:", "User");
-    if (!user) user = "User";
+    // Single-session username using localStorage
+    let user = localStorage.getItem('username');
+    if (!user) {
+        user = window.prompt("Please enter your username:", "User");
+        if (!user) user = "User";
+        localStorage.setItem('username', user);
+    }
     document.getElementById("user").textContent = `${user}`;
 
     // Add event listener to all Log out buttons
@@ -17,10 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (btn.textContent.trim() === "Log out") {
             btn.addEventListener('click', function() {
                 alert(`User ${user} has logged out.`);
-                // Prompt for new username
+                // Remove username from localStorage and prompt for new one
+                localStorage.removeItem('username');
                 let newUser = window.prompt("Please enter your username:", "User");
                 if (!newUser) newUser = "User";
                 user = newUser;
+                localStorage.setItem('username', user);
                 document.getElementById("user").textContent = `${user}`;
             });
         }
