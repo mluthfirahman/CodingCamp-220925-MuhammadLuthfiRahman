@@ -13,7 +13,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
-                        <a href="#" class="text-stone-100 font-bold text-xl pb-1">
+                        <a href="index.html#home" class="text-stone-100 font-bold text-xl pb-1">
                             Techware
                         </a>
                     </div>
@@ -57,9 +57,9 @@
                                 Techware is a technology-driven company dedicated to delivering innovative, efficient, and secure digital solutions. We empower businesses and individuals to thrive in the digital era through our commitment to quality, integrity, and customer satisfaction.
                             </p>
                         </div>
-                        <!-- Cards Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <!-- Vision Card -->
+                        <!-- Vision & Mission Section (always column on mobile, row on md+) -->
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full mb-4">
+                            <!-- Vision Card -->
                             <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 flex flex-col items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-700 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -68,21 +68,24 @@
                                 <h3 class="text-lg font-semibold text-blue-700 mb-1">Vision</h3>
                                 <p class="text-gray-700 text-sm text-center">To be a leading provider of integrated technology solutions that transform and elevate the digital experience for everyone.</p>
                             </div>
-                                <!-- Mission Card -->
-                                <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 flex flex-col items-center col-span-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-700 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none" />
-                                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none" />
-                                        <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" fill="none" />
-                                    </svg>
-                                    <h3 class="text-lg font-semibold text-blue-700 mb-1">Mission</h3>
-                                    <ul class="list-disc list-inside text-gray-700 text-sm text-center">
-                                        <li>Deliver reliable and innovative technology services tailored to client needs.</li>
-                                        <li>Continuously improve through research, learning, and adaptation to new trends.</li>
-                                        <li>Foster a culture of collaboration, integrity, and excellence.</li>
-                                        <li>Empower users with secure, efficient, and user-friendly digital solutions.</li>
-                                    </ul>
-                                </div>
+                            <!-- Mission Card -->
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 flex flex-col items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-700 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none" />
+                                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none" />
+                                    <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                                <h3 class="text-lg font-semibold text-blue-700 mb-1">Mission</h3>
+                                <ul class="list-disc list-inside text-gray-700 text-sm text-center">
+                                    <li>Deliver reliable and innovative technology services tailored to client needs.</li>
+                                    <li>Continuously improve through research, learning, and adaptation to new trends.</li>
+                                    <li>Foster a culture of collaboration, integrity, and excellence.</li>
+                                    <li>Empower users with secure, efficient, and user-friendly digital solutions.</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!-- Cards Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                             <!-- History Card -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 col-span-2">
                                 <!-- History Card -->
@@ -130,9 +133,9 @@
                                 </div>
                             </div>
                         <!-- Our Services Card as a single long card at the bottom -->
-                        <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 flex flex-col w-full md:col-span-2">
+                        <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-4 md:p-6 flex flex-col w-full col-span-full">
                             <h2 class="text-2xl font-bold text-blue-800 mb-2">Our Services</h2>
-                            <ul class="list-disc list-inside text-gray-700 text-base grid grid-cols-1 md:grid-cols-2 gap-x-8">
+                            <ul class="list-disc list-inside text-gray-700 text-base grid grid-cols-1 md:grid-cols-2 gap-y-2">
                                 <li class="cursor-pointer hover:text-blue-700 transition">Custom Software Development</li>
                                 <li class="cursor-pointer hover:text-blue-700 transition">Cloud Integration & Migration</li>
                                 <li class="cursor-pointer hover:text-blue-700 transition">IT Consulting & Strategy</li>
